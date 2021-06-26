@@ -2,6 +2,8 @@
 
 CHECK_MARK="\033[0;32m\xE2\x9C\x94\033[0m"
 
+# The scrtipt was made for gnome-terminal.
+# Edit -> Preferences -> Profiles -> Command -> Hold the terminal open
 
 echo "Launching system"
 echo

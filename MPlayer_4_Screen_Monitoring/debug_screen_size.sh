@@ -5,6 +5,15 @@
 echo "Example usage:"
 echo "./debug_screen_size.sh -i 102760454 -w 300 -h 500 -x 500 -y 10"
 
+##################################################################################################################
+#   FLAGS   #
+# -i window ID # use the command 'xdotool search --onlyvisible --class mplayer' to find the window ID's
+# -w resolution width
+# -h resolution height
+# -x X-axis
+# -y Y-axis
+##################################################################################################################
+
 while getopts i:w:h:x:y: option
 do
 case "${option}"
@@ -18,7 +27,7 @@ esac
 done
 
 #will be used to auto find the mplayer instance
-#DEVICEID=`xdotool search --onlyvisible --name mplayer`
+#DEVICEID=`xdotool search --onlyvisible --class mplayer`
 
 #hardcoded mplayer instance (DEVICEID)
 #DEVICEID=104857606 #change this

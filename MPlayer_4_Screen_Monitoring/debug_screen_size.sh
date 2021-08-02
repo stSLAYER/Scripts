@@ -26,13 +26,6 @@ y) yaxis=${OPTARG};;
 esac
 done
 
-#will be used to auto find the mplayer instance
-#DEVICEID=`xdotool search --onlyvisible --class mplayer`
-
-#hardcoded mplayer instance (DEVICEID)
-#DEVICEID=104857606 #change this
-
-
 #This will set the window position
 xdotool windowsize $DEVICEID $width $height
 

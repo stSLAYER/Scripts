@@ -15,3 +15,15 @@ called 'camera.txt', this makes it so that the user doesn't have to manually inp
 This script makes use of -flags and is used to easily debug the size and position of individual stream, it comes in handy when working on unfamiliar
 screen resolutions, or if the user wants a specific resolution for a specific stream, once the user gets the correct variables using the debugging script
 it can then be harcoded into the main script for a permanent adjustment.
+
+<h3> Usage for debug_screen.sh </h3>
+Example: </br>
+  ./debug_screen_size.sh -i 102760454 -w 300 -h 500 -x 500 -y 10
+</br>
+ FLAGS  </br>
+ 
+-i  window ID (use the command 'xdotool search --onlyvisible --class mplayer' to find the window ID's) </br>
+-w  resolution width </br>
+-h  resolution height </br>
+-x  X-axis </br>
+-y  Y-axis </br>

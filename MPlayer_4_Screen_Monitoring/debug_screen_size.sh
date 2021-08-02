@@ -2,8 +2,8 @@
 
 #This script will need user added varables to resize and reposition the mplayer screen
 
-#echo "Example usage:"
-#echo "/script2.sh -i 102760454 -w 300 -h 500 -x 500 -y 10"
+echo "Example usage:"
+echo "./debug_screen_size.sh -i 102760454 -w 300 -h 500 -x 500 -y 10"
 
 while getopts i:w:h:x:y: option
 do

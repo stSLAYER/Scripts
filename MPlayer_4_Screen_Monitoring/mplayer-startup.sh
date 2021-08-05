@@ -42,16 +42,16 @@
 #########################################################################################################################################################
 
 echo "Opening Camera 1"
-gnome-terminal --window-with-profile=mplayer1 -- sh /home/imraan/Desktop/test_stream/mplayer1.sh	#CHANGE LOCATION & CONTENTS OF mp.player1.sh
+gnome-terminal --window-with-profile=mplayer1 -- sh /home/$USER/Desktop/test_stream/mplayer1.sh	#CHANGE LOCATION & CONTENTS OF mp.player1.sh
 
 echo "Opening Camera 2"
-gnome-terminal --window-with-profile=mplayer2 -- sh /home/imraan/Desktop/test_stream/mplayer2.sh	#CHANGE LOCATION & CONTENTS OF mp.player2.sh
+gnome-terminal --window-with-profile=mplayer2 -- sh /home/$USER/Desktop/test_stream/mplayer2.sh	#CHANGE LOCATION & CONTENTS OF mp.player2.sh
 
 echo "Opening Camera 3"
-gnome-terminal --window-with-profile=mplayer3 -- sh /home/imraan/Desktop/test_stream/mplayer3.sh	#CHANGE LOCATION & CONTENTS OF mp.player3.sh
+gnome-terminal --window-with-profile=mplayer3 -- sh /home/$USER/Desktop/test_stream/mplayer3.sh	#CHANGE LOCATION & CONTENTS OF mp.player3.sh
 
 echo "Opening Camera 4"
-gnome-terminal --window-with-profile=mplayer4 -- sh /home/imraan/Desktop/test_stream/mplayer4.sh	#CHANGE LOCATION & CONTENTS OF mp.player4.sh
+gnome-terminal --window-with-profile=mplayer4 -- sh /home/$USER/Desktop/test_stream/mplayer4.sh	#CHANGE LOCATION & CONTENTS OF mp.player4.sh
 
 sleep 25 #change variable if the resolutions are not syncing
 
@@ -69,16 +69,16 @@ echo "Fetching Camera ID's"
 xdotool search --onlyvisible --class MPlayer  > camera.txt 	#if you're not using MPlayer, change the class variable in this command
 
 #echo "Asigning Camera 1"
-CAMERA1ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -1 | tail -1`
+CAMERA1ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -1 | tail -1`
 
 #echo "Asigning Camera 2"
-CAMERA2ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -2 | tail -1`
+CAMERA2ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -2 | tail -1`
 
 #echo "Asigning Camera 3"
-CAMERA3ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -3 | tail -1`
+CAMERA3ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -3 | tail -1`
 
 #echo "Asigning Camera 4"
-CAMERA4ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -4 | tail -1`
+CAMERA4ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -4 | tail -1`
 
 #########################################################################################################################################################
 

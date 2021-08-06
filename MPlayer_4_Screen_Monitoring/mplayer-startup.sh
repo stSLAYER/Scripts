@@ -13,9 +13,13 @@
 
 # test stream:
 # mplayer rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov
-
 # Find Window ID manually
 # xdotool search --onlyvisible --class MPlayer
+# to find the position/resolution of a terminal window use the following command
+# xdotool getwindowfocus getwindowgeometry
+# or
+# xdotool selectwindow getwindowgeometry
+# getting the terminal position/resolution will help to figure out what resolution/position will be used for the video player
 
 #########################################################################################################################################################
 
@@ -24,7 +28,7 @@
 
 #	Script installation		#
 
-# There are a few requirements to get the script to function, it's not entirely plug and play.
+# There are a few requirements to get the script to function, it's plug and play once setup.
 # step 1: create 4 terminal profiles through gnome-terminal preferences, name each profile sequentially, eg. mplayer1, mplayer2, etc 
 # step 2: each RTSP stream will be launched via an sh script, change the location of the sh script under the "Launching RTSP streams" heading
 # step 3: change the contents of each mplayer.sh script to make sure the stream is running on the correct IP
@@ -42,16 +46,16 @@
 #########################################################################################################################################################
 
 echo "Opening Camera 1"
-gnome-terminal --window-with-profile=mplayer1 -- sh /home/$USER/Desktop/test_stream/mplayer1.sh	#CHANGE LOCATION & CONTENTS OF mp.player1.sh
+gnome-terminal --window-with-profile=mplayer1 -- sh /home/imraan/Desktop/test_stream/mplayer1.sh	#CHANGE LOCATION & CONTENTS OF mp.player1.sh
 
 echo "Opening Camera 2"
-gnome-terminal --window-with-profile=mplayer2 -- sh /home/$USER/Desktop/test_stream/mplayer2.sh	#CHANGE LOCATION & CONTENTS OF mp.player2.sh
+gnome-terminal --window-with-profile=mplayer2 -- sh /home/imraan/Desktop/test_stream/mplayer2.sh	#CHANGE LOCATION & CONTENTS OF mp.player2.sh
 
 echo "Opening Camera 3"
-gnome-terminal --window-with-profile=mplayer3 -- sh /home/$USER/Desktop/test_stream/mplayer3.sh	#CHANGE LOCATION & CONTENTS OF mp.player3.sh
+gnome-terminal --window-with-profile=mplayer3 -- sh /home/imraan/Desktop/test_stream/mplayer3.sh	#CHANGE LOCATION & CONTENTS OF mp.player3.sh
 
 echo "Opening Camera 4"
-gnome-terminal --window-with-profile=mplayer4 -- sh /home/$USER/Desktop/test_stream/mplayer4.sh	#CHANGE LOCATION & CONTENTS OF mp.player4.sh
+gnome-terminal --window-with-profile=mplayer4 -- sh /home/imraan/Desktop/test_stream/mplayer4.sh	#CHANGE LOCATION & CONTENTS OF mp.player4.sh
 
 sleep 25 #change variable if the resolutions are not syncing
 
@@ -69,16 +73,16 @@ echo "Fetching Camera ID's"
 xdotool search --onlyvisible --class MPlayer  > camera.txt 	#if you're not using MPlayer, change the class variable in this command
 
 #echo "Asigning Camera 1"
-CAMERA1ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -1 | tail -1`
+CAMERA1ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -1 | tail -1`
 
 #echo "Asigning Camera 2"
-CAMERA2ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -2 | tail -1`
+CAMERA2ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -2 | tail -1`
 
 #echo "Asigning Camera 3"
-CAMERA3ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -3 | tail -1`
+CAMERA3ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -3 | tail -1`
 
 #echo "Asigning Camera 4"
-CAMERA4ID=`cat /home/$USER/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -4 | tail -1`
+CAMERA4ID=`cat /home/imraan/Desktop/MPlayer_4_Screen_Monitoring/camera.txt| head -4 | tail -1`
 
 #########################################################################################################################################################
 
